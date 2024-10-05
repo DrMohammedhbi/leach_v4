@@ -1,0 +1,302 @@
+file 12729 1726952497                                           
+version 2
+run General-0-20240922-00:00:44-4472
+attr configname General
+attr datetime 20240922-00:00:44
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network SimpleNet
+attr processid 4472
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.arp.typename "\"GlobalArp\""
+param *.radioMedium.typename "\"ApskScalarRadioMedium\""
+param *.radioMedium.backgroundNoise.power -90dBm
+param *.radioMedium.mediumLimitCache.centerFrequency 2GHz
+param *.host*.hasStatus true
+param *.visualizer.energyStorageVisualizer.displayEnergyStorages true
+param *.configurator.config "xmldoc (\"address.xml\")"
+param *.baseStation.typename "\"LEACHbs\""
+param *.host*.typename "\"LEACHnode\""
+param *.host*.LEACHnode.clusterHeadPercentage 0.2
+param *.numNodes 8
+param *.host*.mobility.typename "\"StationaryMobility\""
+param *.host[*].mobility.initFromDisplayString false
+param **.constraintAreaMinX 100m
+param **.constraintAreaMaxX 480m
+param **.constraintAreaMinY 100m
+param **.constraintAreaMaxY 800m
+param *.host*.wlan[0].typename "\"Ieee802154NarrowbandInterface\""
+param *.host*.wlan[0].radio.typename "\"ApskScalarRadio\""
+param *.host*.wlan[0].radio.centerFrequency 2GHz
+param *.host*.wlan[0].radio.bandwidth 2MHz
+param *.host*.wlan[0].radio.transmitter.power 1.4mW
+param *.host*.wlan[0].radio.transmitter.preambleDuration 10us
+param *.host*.wlan[0].radio.transmitter.headerLength 8B
+param *.host*.wlan[0].radio.receiver.sensitivity -85dBm
+param *.host*.wlan[0].radio.receiver.energyDetection -85dBm
+param *.host*.wlan[0].radio.receiver.snirThreshold 4dB
+param *.host*.wlan[0].radio.displayCommunicationRange true
+param *.baseStation.wlan[0].typename "\"Ieee802154NarrowbandInterface\""
+param *.baseStation.wlan[0].radio.typename "\"ApskScalarRadio\""
+param *.baseStation.wlan[0].radio.centerFrequency 2GHz
+param *.baseStation.wlan[0].radio.bandwidth 2MHz
+param *.baseStation.wlan[0].radio.transmitter.power 1.4mW
+param *.baseStation.wlan[0].radio.transmitter.preambleDuration 10us
+param *.baseStation.wlan[0].radio.transmitter.headerLength 8B
+param *.baseStation.wlan[0].radio.receiver.sensitivity -85dBm
+param *.baseStation.wlan[0].radio.receiver.energyDetection -85dBm
+param *.baseStation.wlan[0].radio.receiver.snirThreshold 4dB
+param *.baseStation.wlan[0].radio.displayCommunicationRange true
+param *.host*.**.bitrate 1Mbps
+param *.baseStation.**.bitrate 1Mbps
+param *.host*.energyStorage.typename "\"SimpleEpEnergyStorage\""
+param *.host[*].energyStorage.initialCapacity 1J
+param *.host[*].energyStorage.nominalCapacity 1034J
+param *.host[*].energyManagement.typename "\"SimpleEpEnergyManagement\""
+param *.host[*].energyManagement.nodeShutdownCapacity "0.1 * energyStorage.nominalCapacity"
+param *.host*.wlan[0].radio.energyConsumer.typename "\"StateBasedEpEnergyConsumer\""
+param *.host*.wlan[0].radio.energyConsumer.offPowerConsumption 0mW
+param *.host*.wlan[0].radio.energyConsumer.sleepPowerConsumption 1mW
+param *.host*.wlan[0].radio.energyConsumer.switchingPowerConsumption 1mW
+param *.host*.wlan[0].radio.energyConsumer.receiverIdlePowerConsumption 2mW
+param *.host*.wlan[0].radio.energyConsumer.receiverBusyPowerConsumption 5mW
+param *.host*.wlan[0].radio.energyConsumer.receiverReceivingPowerConsumption 10mW
+param *.host*.wlan[0].radio.energyConsumer.transmitterIdlePowerConsumption 2mW
+param *.host*.wlan[0].radio.energyConsumer.transmitterTransmittingPowerConsumption 100mW
+param *.host*.wlan[0].radio.displayInterferenceRange true
+param *.radioMedium.pathLoss.typename "\"FreeSpacePathLoss\""
+
+vector 0 SimpleNet.host[0].energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 1 SimpleNet.host[1].energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 2 SimpleNet.host[2].energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 3 SimpleNet.host[3].energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 4 SimpleNet.host[4].energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 5 SimpleNet.host[5].energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 6 SimpleNet.host[6].energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 7 SimpleNet.host[7].energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 8 SimpleNet.host[0].energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 9 SimpleNet.host[1].energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 10 SimpleNet.host[2].energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 11 SimpleNet.host[3].energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 12 SimpleNet.host[4].energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 13 SimpleNet.host[5].energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 14 SimpleNet.host[6].energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 15 SimpleNet.host[7].energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 16 SimpleNet.host[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 17 SimpleNet.host[0].wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 18 SimpleNet.host[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 19 SimpleNet.host[1].wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 20 SimpleNet.host[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 21 SimpleNet.host[2].wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 22 SimpleNet.host[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 23 SimpleNet.host[3].wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 24 SimpleNet.host[4].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 25 SimpleNet.host[4].wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 26 SimpleNet.host[5].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 27 SimpleNet.host[5].wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 28 SimpleNet.host[6].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 29 SimpleNet.host[6].wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 30 SimpleNet.host[7].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 31 SimpleNet.host[7].wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 32 SimpleNet.baseStation.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 33 SimpleNet.host[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 34 SimpleNet.host[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 35 SimpleNet.host[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 36 SimpleNet.host[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 37 SimpleNet.host[4].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 38 SimpleNet.host[5].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 39 SimpleNet.host[6].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 40 SimpleNet.host[7].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 41 SimpleNet.baseStation.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+0	11463 9 0 0 0 0 1 1 1 1 1
+1	11472 9 0 0 0 0 1 1 1 1 1
+2	11481 9 0 0 0 0 1 1 1 1 1
+3	11490 9 0 0 0 0 1 1 1 1 1
+4	11499 9 0 0 0 0 1 1 1 1 1
+5	11508 9 0 0 0 0 1 1 1 1 1
+6	11517 9 0 0 0 0 1 1 1 1 1
+7	11526 9 0 0 0 0 1 1 1 1 1
+8	11535 58 0 1 0 0 6 0 0.002 0.002 4e-006
+9	11593 40 0 0 0 0 4 0 0.002 0.002 4e-006
+10	11633 44 0 0 0 0 4 0 0.002 0.002 4e-006
+11	11677 44 0 0 0 0 4 0 0.002 0.002 4e-006
+12	11721 44 0 0 0 0 4 0 0.002 0.002 4e-006
+13	11765 44 0 0 0 0 4 0 0.002 0.002 4e-006
+14	11809 44 0 0 0 0 4 0 0.002 0.002 4e-006
+15	11853 44 0 0 0 0 4 0 0.002 0.002 4e-006
+16	11897 30 0 1 0 0 3 0 2 2 4
+17	11927 54 0 1 0 0 5 0 0.002 0.002 4e-006
+18	11981 20 0 0 0 0 2 0 2 2 4
+19	12001 34 0 0 0 0 3 0 0.002 0.002 4e-006
+20	12035 20 0 0 0 0 2 0 2 2 4
+21	12055 34 0 0 0 0 3 0 0.002 0.002 4e-006
+22	12089 20 0 0 0 0 2 0 2 2 4
+23	12109 34 0 0 0 0 3 0 0.002 0.002 4e-006
+24	12143 20 0 0 0 0 2 0 2 2 4
+25	12163 34 0 0 0 0 3 0 0.002 0.002 4e-006
+26	12197 20 0 0 0 0 2 0 2 2 4
+27	12217 34 0 0 0 0 3 0 0.002 0.002 4e-006
+28	12251 20 0 0 0 0 2 0 2 2 4
+29	12271 34 0 0 0 0 3 0 0.002 0.002 4e-006
+30	12305 20 0 0 0 0 2 0 2 2 4
+31	12325 34 0 0 0 0 3 0 0.002 0.002 4e-006
+32	12359 30 0 0 0 0 3 0 2 2 4
+33	12389 20 0 1 0 0 2 0 1 1 1
+34	12409 10 0 0 0 0 1 1 1 1 1
+35	12419 10 0 0 0 0 1 1 1 1 1
+36	12429 10 0 0 0 0 1 1 1 1 1
+37	12439 10 0 0 0 0 1 1 1 1 1
+38	12449 10 0 0 0 0 1 1 1 1 1
+39	12459 10 0 0 0 0 1 1 1 1 1
+40	12469 10 0 0 0 0 1 1 1 1 1
+41	12479 10 0 0 0 0 1 1 1 1 1
+9	12489 18 2 2 0 0 2 0 0 0 0
+18	12507 10 2 2 0 0 1 0 0 0 0
+19	12517 20 2 2 0 0 2 0 0 0 0
+34	12537 10 2 2 0 0 1 0 0 0 0
+10	12547 20 3 3 0 0 2 0 0 0 0
+20	12567 10 3 3 0 0 1 0 0 0 0
+21	12577 20 3 3 0 0 2 0 0 0 0
+35	12597 10 3 3 0 0 1 0 0 0 0
+11	12607 20 4 4 0 0 2 0 0 0 0
+22	12627 10 4 4 0 0 1 0 0 0 0
+23	12637 20 4 4 0 0 2 0 0 0 0
+36	12657 10 4 4 0 0 1 0 0 0 0
+12	12667 20 5 5 0 0 2 0 0 0 0
+24	12687 10 5 5 0 0 1 0 0 0 0
+25	12697 20 5 5 0 0 2 0 0 0 0
+37	12717 10 5 5 0 0 1 0 0 0 0
+
